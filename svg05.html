@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <style>
+        svg {
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+
+        .line1 {
+            fill: none;
+            stroke: red;
+            stroke-width: 2px;
+        }
+        
+        .polyline1 {
+            fill: none;
+            stroke: red;
+            stroke-width: 2px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <svg>
+        <line x1="0" y1="0" x2="200" y2="200" class="line1"></line>
+    </svg>
+    <svg>
+        <line x1="50" y1="50" x2="200" y2="200" class="line1"></line>
+    </svg>
+    <svg>
+        <polyline points="32,31 164,42 22,92 172,131 89,167 89,6 " class="polyline1"></polyline>
+    </svg>
+</body>
+
+</html>

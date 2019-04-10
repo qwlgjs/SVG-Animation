@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <style>
+        svg {
+            width: 160px;
+            height: 160px;
+            background: chartreuse;
+        }
+
+        .circle1 {
+            fill: green;
+        }
+
+        .circle2 {
+            fill: forestgreen;
+            stroke: darkgreen;
+            stroke-width: 5;
+        }
+        #canvas {
+            background: chartreuse;
+        }
+
+    </style>
+</head>
+
+<body>
+    <svg>
+        <circle class="circle1" cx="80" cy="80" r="60"></circle>
+    </svg>
+
+    <svg>
+        <circle class="circle2" cx="80" cy="80" r="60"></circle>
+    </svg>
+    <canvas id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        
+        ctx.arc(150,75,70,0, Math.PI*2);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+
+    </script>
+</body>
+
+</html>

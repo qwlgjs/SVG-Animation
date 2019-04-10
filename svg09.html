@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <style>
+        svg {
+            width: 200px;
+            height: 200px;
+            background: violet;
+        }
+        .polygon1 {
+            stroke: purple;
+            stroke-width: 5px;
+        }
+        .path1 {
+            stroke: purple;
+            stroke-width: 2px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <svg>
+        <image xlink:href="clip_01.jpg" width="200" height="200"></image>
+    </svg>
+    <svg>
+        <image xlink:href="clip_01.jpg" width="200" height="200" clip-path="circle(100px at center)" />
+    </svg>
+    <svg>
+        <clipPath id="clipPath1">
+           <path class="path1" d="M100,100C153.8-29.8,46.2-29.8,100,100C46.2-29.8-29.8,46.2,100,100C-29.8,46.2-29.8,153.8,100,100
+		C-29.8,153.8,46.2,229.8,100,100C46.2,229.8,153.8,229.8,100,100C153.8,229.8,229.8,153.8,100,100C229.8,153.8,229.8,46.2,100,100
+		C229.8,46.2,153.8-29.8,100,100z"></path>
+        </clipPath>
+        <image xlink:href="clip_01.jpg" width="200" height="200" clip-path="url(#clipPath1)" />
+    </svg>
+    <svg>
+        <clipPath id="clipPath2">
+           <polygon points="100,9 117,58 164,35 141,82 190,100 141,117 164,164 117,141 100,190
+    82,141 35,164 58,117 9,100 58,82 35,35 82,58 " class="polygon1"></polygon>
+        </clipPath>
+        <image xlink:href="clip_01.jpg" width="200" height="200" clip-path="url(#clipPath2)" />
+    </svg>
+     <svg>
+        <pattern id="pattern" patternUnits="useSpaceOnUse" width="200" height="200">
+            <image xlink:href="clip_01.jpg" width="200" height="200"/>
+        </pattern>
+        <text x="10" y="120" font-size="45"  font-weight="bold" fill="url(#pattern)" >Get Jinx</text>
+    </svg>
+</body>
+
+</html>
